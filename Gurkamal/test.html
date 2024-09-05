@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        background-color: #333;
+        padding: 1em;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 1em;
+      }
+
+      nav .dark-mode-toggle {
+        cursor: pointer;
+      }
+
+      section {
+        padding: 4em 2em;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Dark mode styles */
+      body.dark-mode {
+        background-color: #181818;
+        color: #f4f4f9;
+      }
+
+      body.dark-mode nav {
+        background-color: #222;
+      }
+
+      body.dark-mode nav a {
+        color: #f4f4f9;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        section {
+          padding: 2em 1em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div>Portfolio</div>
+      <div>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <span class="dark-mode-toggle">🌙</span>
+      </div>
+    </nav>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p class="container">
+        Hello, I’m [Your Name]. I'm passionate about [Your Interests]. I have
+        been working on projects related to [Your Area of Expertise], and I love
+        solving problems and creating efficient solutions.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="container">
+        <ul>
+          <li>Skill 1</li>
+          <li>Skill 2</li>
+          <li>Skill 3</li>
+          <li>Skill 4</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="container">
+        <p>Here are some of the projects I have worked on:</p>
+        <ul>
+          <li><strong>Project 1:</strong> Description</li>
+          <li><strong>Project 2:</strong> Description</li>
+          <li><strong>Project 3:</strong> Description</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="container">
+        <p>You can reach me at:</p>
+        <p>
+          Email:
+          <a href="mailto:youremail@example.com">youremail@example.com</a>
+        </p>
+      </div>
+    </section>
+
+    <script>
+      const darkModeToggle = document.querySelector(".dark-mode-toggle");
+      darkModeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        darkModeToggle.textContent = document.body.classList.contains(
+          "dark-mode"
+        )
+          ? "☀️"
+          : "🌙";
+      });
+    </script>
+  </body>
+</html>
